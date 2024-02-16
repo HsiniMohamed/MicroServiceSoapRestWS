@@ -8,6 +8,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -28,4 +29,6 @@ public class Compte {
 	private Date dateCreation;
 	@Enumerated(EnumType.ORDINAL)
 	private TypeCompte type;
+	@ManyToOne
+	private Client client;
 }
